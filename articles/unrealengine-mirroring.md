@@ -1,6 +1,6 @@
 ---
 title: "UnrealEngineのリポジトリをGitHubにミラーリングする"
-emoji: "🗂"
+emoji: "🪞"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["UnrealEngine", "UE5"]
 published: false
@@ -24,11 +24,12 @@ source:[2 GB のプッシュ制限のトラブルシューティング \- GitHub
 
 ## 手順
 ### Clone
+まずは普通にCloneしてきます。
+`--mirror`付けてもいいかもしれません。
 ```
 git clone {UnrealEngineのクローン元URL} UnrealEngine
 ```
 UnrealEngineフォルダ以下にクローンされているはずです。
-`--mirror`付けてもいいかもしれません。
 
 ### Remoteの変更
 
@@ -69,9 +70,8 @@ done
 sh tag-push.sh
 ```
 
-
-これでTagのPushは行えましたが、おそらく5.2.1-release以降のTagのPushに失敗しているはずです。
-次の手順に行きます。
+TagのPushに成功したら、5.2.1-releaseからmainブランチを生やしてPushしておきましょう。
+おそらくそれ以降は失敗しているはずです。
 
 ### 5.2.1-Release以降のTagのPush
 
@@ -83,36 +83,52 @@ sh tag-push.sh
 適当に`small-commit-push.sh`という名前にしておきました。
 
 ``` sh
-#!/bin/bash
-
-# 開始タグと終了タグを設定します
-start_tag="start-tag"
-end_tag="end-tag"
+start_tag=$1
+end_tag=$2
 
 # 開始タグと終了タグの間のコミットを取得します
-commits=$(git log --pretty=format:'%H' $start_tag..$end_tag)
+commits=$(git log --reverse --pretty=format:'%H' $start_tag..$end_tag)
 
-# コミットを2000ごとに分割します
-commit_chunks=$(echo $commits | xargs -n2000)
+# 開始タグと終了タグの間のコミットを取得します
+readarray -t commits < <(git log --reverse --pretty=format:'%H' $start_tag..$end_tag)
 
-# 各チャンクをPushします
-for chunk in $commit_chunks
-do
-    echo "Pushing commits: $chunk"
-    for commit in $chunk
-    do
-        git push origin $commit
-    done
-    echo "Commits pushed successfully"
+chunk=()
+count=0
+
+for commit in "${commits[@]}"; do
+    chunk+=("$commit")
+    ((count++))
+
+    if (( count % 2000 == 0 )); then
+        echo "Creating branch with 2000 commits"
+        git checkout -b temp_branch "${chunk[0]}"
+        git push -f origin temp_branch
+        git checkout main
+        git branch -D temp_branch
+        echo "Branch with 2000 commits created successfully"
+        chunk=()
+    fi
 done
+
+# 最後のチャンクを処理します
+if (( ${#chunk[@]} > 0 )); then
+    echo "Creating branch with remaining commits"
+    git checkout -b temp_branch "${chunk[0]}"
+    git push -f origin temp_branch
+    git checkout main
+    git branch -D temp_branch
+    echo "Branch with remaining commits created successfully"
+fi
 ```
 
 このスクリプトを下記のような形で使用します。
 ```
-sh small-commit-push 5.2.1-release 5.3.0-release
+sh small-commit-push.sh 5.2.1-release 5.3.0-release
 ```
 
 これで5.3.0-releaseまでのTagまでのコミットがPushされているはずです。
+終わったら5.3.0-releaseのTagをPushします。
+
 これを必要なTag分繰り返します。5.4.1-releaseまで必要なら打たれているTag分行ってください。
 
 本当はここもスクリプト作って自動化した方がいいと思うんですが、大した量がないので手作業でやりました。
@@ -123,3 +139,6 @@ sh small-commit-push 5.2.1-release 5.3.0-release
 5.4.1-releaseが必要ならそこから、5.3.2-releaseが必要ならそこから生やしてください。
 
 ブランチが1つとTagがPushされたリポジトリが出来上がっているはずです。
+temp_branchが居るかもしれませんが、文字通りtempなので消しちゃっていいでしょう。
+
+おしまい。
