@@ -68,7 +68,7 @@ RHI（UnrealEngine内のグラフィックシステム）のメモリやパフ�
 `stat initviews`と併用することが多いかもしれない。
 
 
-# 参考リンク集
+# 参考リンク
 [Unreal Engine Console Commands Reference | Epic Developer Community](https://dev.epicgames.com/documentation/en-us/unreal-engine/unreal-engine-console-commands-reference)
 [\[UE4\] コンソールコマンドの使い方＆よく使うコマンド一覧｜株式会社ヒストリア](https://historia.co.jp/archives/1342/)
 [\[UE4\] Statコマンドに情報を追加しよう｜株式会社ヒストリア](https://historia.co.jp/archives/14778/)
