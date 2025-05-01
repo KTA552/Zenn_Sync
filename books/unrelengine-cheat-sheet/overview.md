@@ -10,7 +10,7 @@ UnrealEngineに関する情報は探せば見つかるようになってきた�
 各記事に記事を書いた時点のUEのバージョンを書くようにします。
 特に特記事項がない限りバニラ版（無改造）です。
 
-# リンク集
+# 参考リンク
 [Unreal Engineのドキュメント | Epic Developer Community](https://dev.epicgames.com/documentation/ja-jp/unreal-engine)
 [Unreal Engine \- YouTube](https://www.youtube.com/@UnrealEngine)
 [Unreal Engine JP \- YouTube](https://www.youtube.com/@UnrealEngineJP)
