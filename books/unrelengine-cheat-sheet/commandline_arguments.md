@@ -77,6 +77,15 @@ UnrealEditor.exe MyGame.uproject -trace=default,memory
 公式ドキュメントは下記。
 [Unreal Engine の Memory Insights | Epic Developer Community](https://dev.epicgames.com/documentation/ja-jp/unreal-engine/memory-insights-in-unreal-engine)
 
+# IDEからの引数の簡単な設定方法
+## Rider
+EzArgsプラグインを使うと起動時に引数としてパラメータを設定できます。
+
+## VisualStudio
+Visual Studio Tools for UnrealEngineをインストールして使いましょう。
+[Visual Studio Tools for Unreal Engine をインストールする \| Microsoft Learn](https://learn.microsoft.com/ja-jp/visualstudio/gamedev/unreal/get-started/vs-tools-unreal-install)
+[クイック スタート: Visual Studio Tools for Unreal Engine \| Microsoft Learn](https://learn.microsoft.com/ja-jp/visualstudio/gamedev/unreal/get-started/vs-tools-unreal-quickstart#command-line-argument-dropdown)
+
 
 # 参考リンク
 [Unreal Engine のコマンドライン引数 | Epic Developer Community](https://dev.epicgames.com/documentation/ja-jp/unreal-engine/command-line-arguments-in-unreal-engine)
