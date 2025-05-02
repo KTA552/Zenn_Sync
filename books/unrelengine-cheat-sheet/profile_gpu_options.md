@@ -10,7 +10,7 @@ title: "ProfileGPU Options"
 
 # ProfileGPUとは
 GPUの負荷を調べるためのデバッグコマンド（コンソールコマンド）。
-Stat GPUよりもより詳細な情報が見える。
+Stat GPUよりも詳細な情報が見える。
 
 # 使い方
 `ProfileGPU`をデバッグコマンドで実行。
