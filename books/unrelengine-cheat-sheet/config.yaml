@@ -10,3 +10,4 @@ chapters:
   - editor_preferences
   - commandline_arguments
   - profile_gpu_options
+  - content_cook_and_package_options
