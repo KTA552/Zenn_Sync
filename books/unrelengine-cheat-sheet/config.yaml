@@ -9,3 +9,4 @@ chapters:
   - stat_commands
   - editor_preferences
   - commandline_arguments
+  - profile_gpu_options
