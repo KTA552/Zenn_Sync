@@ -27,12 +27,19 @@ UnrealEngineのEditorの設定関係が行えるツールウィンドウ。
 
 ## Assetを開く際のウインドウの挙動の設定
 ![](https://storage.googleapis.com/zenn-user-upload/f435bfeaeb2c-20250501.png)
+`Appearance/User Interface/Asset Editor Open Location`
 Blueprint等のアセットを開く際のウインドウを新しく開くか、タブを追加するか等の設定。
 
 ## ソースコードを開く際のIDEの設定
 ![](https://storage.googleapis.com/zenn-user-upload/6e0588669e96-20250501.png)
+`Source Code/Accessor/Source Code Editor`
 Blueprintノードをダブルクリックした際などにC++のコードが開かれますが、開くアプリケーションの設定。
 VisualStudioを使っているならそのバージョンを、Riderを使っているならRiderを設定しましょう。
+
+## PIE実行時にビューポート内でマウスをアクティブな状態にしておく
+![](https://storage.googleapis.com/zenn-user-upload/772c5cfac7cb-20250502.png)
+`Level Editor/Play/Play in Editor/Game Gets Mouse Control`をON。
+PIE実行時、マウスを有効にするために一度ビューポートをクリックする必要がありますが、ONにしておくとPIE実行した時点でマウスが有効になります。
 
 # 参考リンク
 [Unreal Editor の環境設定 | Epic Developer Community](https://dev.epicgames.com/documentation/ja-jp/unreal-engine/unreal-editor-preferences)
