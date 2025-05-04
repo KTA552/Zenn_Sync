@@ -15,7 +15,7 @@ title: "Material Options"
 [Unreal Engine のマテリアル | Epic Developer Community](https://dev.epicgames.com/documentation/ja-jp/unreal-engine/unreal-engine-materials)
 
 マテリアルの機能が巨大になってるため「実はオプションとして存在してました」な機能もあります。
-このページでは「基本的には使わないけど困った時にオプションとして使うこともある」ぐらいのものをトピックとして取り上げます。
+このページでは「聞かないと知らなかった」ぐらいのものをトピックとして取り上げます。
 Tipsらしいですね。
 
 # Parameter
@@ -42,6 +42,20 @@ MaterialEditorの左上にはマテリアルの描画結果が表示されてい
 ![](https://storage.googleapis.com/zenn-user-upload/67f82a1d1dd6-20250503.png)
 マテリアル内でプラットフォームやクォリティ、描画パスに応じて処理を分けるために使用します。
 気付いたら増えてました。
+
+- ShaderPlatformInfo Switch
+- Feature Level Switch
+- Quality Switch
+- Shader Stage Switch
+- Nanite Pass Switch
+- Reflection Capture Pass Switch
+- Shadow Pass Switch
+- Shader Stage Switch
+- Shading Pass Switch
+- PathTracingQualitySwitchReplace
+- PathTracingRayTypeSwitch
+- VirtualTextureFeatureSwitch
+
 画像のコメントによるカテゴリ分けは個人の主観です。
 使用例は下記リンクを参考にしてみてください。
 [UE5\.1 アップデート ~ Rendering / Effect ~ \| ドクセル](https://www.docswell.com/s/EpicGamesJapan/Z84G15-UE5_1_Rendering%20_Effect?ref=rss#p45)
