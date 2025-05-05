@@ -12,3 +12,4 @@ chapters:
   - profile_gpu_options
   - content_cook_and_package_options
   - material_options
+  - console_commands_show
