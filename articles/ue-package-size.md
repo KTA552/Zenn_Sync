@@ -60,7 +60,24 @@ ${ProjectDir}/Saved/Coocked/Win64/${ProjectName}/MetaDeta/DevelopmentAssetRegist
 CSVにはアセット単位のサイズが出力されているので、具体的に何のアセットがどれくらいのサイズになっているかわかると思います。
 ![](https://storage.googleapis.com/zenn-user-upload/07b38671d229-20250502.png)
 
+## Editorでの確認方法
+UE5.4から`DevelopmentAssetRegistry.bin`の情報を表示出来るツールが実装されているので、そちらでも確認できます。
+![](https://storage.googleapis.com/zenn-user-upload/4d596f5be68a-20250515.png)
+メニューバーの`Tools/Audit/Asset Disk Size1`を選択します。(1でも2でも機能は一緒みたいなのでどちらでもいいです)
+
+![](https://storage.googleapis.com/zenn-user-upload/a1134d29b7e0-20250515.png)
+パッケージかStageビルドした際に出力した`DevelopmentAssetRegistry.bin`を選択して開きます。
+ツールを開いたときにダイアログが出ますが、デフォルトでは`.ucookmeta`を開くようになっているので切り替えましょう。
+
+![](https://storage.googleapis.com/zenn-user-upload/76c756c0dbac-20250515.png)
+ファイルを開いた後、アセットのタイプ毎にグループ表示を切り替えればパッケージ内のアセットの内訳が表示されます。
+
+
+
+
+
 
 # 参考リンク
 [Unreal Engine 5\.1 リリース ノート \| Unreal Engine 5\.1 ドキュメンテーション \| Epic Developer Community](https://dev.epicgames.com/documentation/ja-jp/unreal-engine/unreal-engine-5.1-release-notes?application_version=5.1)
 [[UE4] シングルパックファイル内のアセットリストを取得する #UnrealEngine - Qiita](https://qiita.com/donbutsu17/items/c0efe626f232652dd248)
+[Unreal Engine 5\.4 リリース ノート \| Unreal Engine 5\.4 ドキュメンテーション \| Epic Developer Community](https://dev.epicgames.com/documentation/ja-jp/unreal-engine/unreal-engine-5.4-release-notes?application_version=5.4#editor)
