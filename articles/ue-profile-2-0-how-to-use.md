@@ -3,7 +3,7 @@ title: "[UE5] UE5.6以降のProfileGPU, GPU Insightsの使い方"
 emoji: "📊"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [UnrealEngine, "UE5"]
-published: false
+published: true
 ---
 
 # 記事執筆時環境
