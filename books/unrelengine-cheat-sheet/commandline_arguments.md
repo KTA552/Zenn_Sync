@@ -64,6 +64,15 @@ DirectX12で実行。
 ## -LLM
 stat llmで使用するメモリトラッカーの有効化。
 
+## -LLMTagSets
+stat llmassetsで使用するメモリトラッカーの有効化。
+下記のように使用する。
+```
+-llm -llmtagsets=assets,assetclasses
+```
+
+`*.target.cs`で`LLM_ALLOW_ASSETS_TAGS`を1にするか、`LowLevelMemTracker.h`の中身を書き換える必要がある。
+
 ## -RenderOffScreen
 よくは使わないがJenkinsから実行する際に使用する。
 Jenkinsから実行する際にこれを付けないとゲームがクラッシュするため。
@@ -76,6 +85,12 @@ UnrealEditor.exe MyGame.uproject -trace=default,memory
 ```
 公式ドキュメントは下記。
 [Unreal Engine の Memory Insights | Epic Developer Community](https://dev.epicgames.com/documentation/ja-jp/unreal-engine/memory-insights-in-unreal-engine)
+
+アセットのメタデータを取得したい場合は下記のように指定。
+```
+UnrealEditor.exe MyGame.uproject -trace=default,memory,metadata,assetmetadata
+```
+参考 : [\[UE5\] Memory Insightsの使い方とアセット使用状況の表示方法](https://zenn.dev/kta552/articles/ue-memory-insights-how-to-use)
 
 # IDEからの引数の簡単な設定方法
 ## Rider
