@@ -14,7 +14,8 @@ published: false
 | Platform | Windows |
 
 # 前提
-この記事はUnreal Engine Advent Calender 2025の6日目の記事になります。
+この記事は[Unreal Engine \(UE\) \- Qiita Advent Calendar 2025 \- Qiita](https://qiita.com/advent-calendar/2025/ue)
+の6日目の記事になります。
 また、GPU負荷やポッピング対策などの負荷や動作への言及はこの記事ではしません。
 
 # 概要
