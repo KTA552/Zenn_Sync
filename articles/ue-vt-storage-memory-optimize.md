@@ -71,9 +71,6 @@ Unreal InsightsのMemoryInsightsで確認します。
 詳しくは下記ドキュメントを参考にしてください。
 [Unreal Engine のテクスチャ形式のサポートと設定 \| Epic Developer Community](https://dev.epicgames.com/documentation/ja-jp/unreal-engine/texture-format-support-and-settings-in-unreal-engine)
 
-通常のテクスチャならXXXが使えていましたが、VirtualTextureには効きません。
-VirtualTexutreのサイズを設定する場合はXXX_VTを使用する必要があります。
-
 通常のテクスチャなら`MaxLODSize`が使用できますが、VirtualTextureには効きません。
 VirtualTextureの場合は、`MaxLODSize_VT`を使用します。
 
