@@ -3,7 +3,7 @@ title: "[UE5] VirtualTextureのストレージ容量とメモリ使用量の調�
 emoji: "📅"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [UnrealEngine, "UE5"]
-published: false
+published: true
 ---
 
 # 記事執筆時環境
