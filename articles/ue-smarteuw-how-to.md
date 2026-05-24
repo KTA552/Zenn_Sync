@@ -20,6 +20,7 @@ published: false
 
 # 作ったサンプル
 想定してるのはありがちな「何かしらのアセットを選択して、オプションを何か選択して実行するツール」です。
+https://github.com/KTA552/UE-SmartEUW-Sample
 
 ## 実行時
 ![](/images/ue-smarteuw-how-to-article/smart-euw-sample00.png)
@@ -71,6 +72,29 @@ BorderのDrawAsをBorderにして、Marginを0以上にしておくとテキス�
 ここはツールの名前表示よりもどちらかと言えばヘルプボタンの配置の方が重要だと思ってます。
 ツールの使い方のドキュメントは大抵の場合用意すると思うのですが、ツールとリンクしてないと「使い方を知ってる人だけが使うツール」になります。
 BPにLaunchURLというノードがあるので、ここにドキュメントのURLを記載しておくとボタンを押したときにブラウザが開いてURLにジャンプしてくれます。
+
+# まとめ
+EUWでツールを作っておくと便利機能をまとめられるので非常に便利です。
+ただツールの見た目だったり使い心地がちょっと・・・だと使用頻度が低いツールになってしまうので、せっかく作ったのにもったいないということになりがちです。
+紹介したポイントを押さえておくと、ある程度それらしい見た目になってくれるのでお勧めです。
+
+# 宣伝
+作成したEditorUtilityWidgetが増えた場合に立ち上げるのが面倒くさいと感じていて、EUWのショートカットを登録できるツールをFabで公開中です。
+https://www.fab.com/listings/c9f87865-9670-4be0-a79f-6f28587e10f6
+
+コードも公開してあります。
+https://github.com/KTA552/UE-WidgetLauncher
+
+# 参考
+[EditorUtilityWidgetPetitDeepDive \| ドクセル](https://www.docswell.com/s/kinnaji/5P9NWL-euw-petit-deep-dive)
+[【UE5】UE5版 EditorUtilityWidgetについてのあれこれ \| キンアジのブログ](https://kinnaji.com/2024/05/06/unreal-engine-meetup-connect-vol-2/)
+[UE5：Editor Utilityを活用したツール制作術 \| CG・映像の専門情報サイト \| CGWORLD\.jp](https://cgworld.jp/regular/unreal_engine_5_editor_utility/)
+[Editor Utility Widget & エディタ拡張 \| UE5攻略リンク](https://ue5study.com/unrealengine-editorutility/)
+
+
+
+
+
 
 
 
